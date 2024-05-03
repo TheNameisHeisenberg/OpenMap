@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81B5A7F62BE5207100034203 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B5A7F52BE5207100034203 /* POI.swift */; };
 		81CBE21D2BE3D04400E8F4DB /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CBE21C2BE3D04400E8F4DB /* SearchBar.swift */; };
 		81DCE5512BE3CCEE0054F888 /* OpenStreetMapVersuchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DCE5502BE3CCEE0054F888 /* OpenStreetMapVersuchApp.swift */; };
 		81DCE5532BE3CCEE0054F888 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DCE5522BE3CCEE0054F888 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81B5A7F52BE5207100034203 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 		81CBE21C2BE3D04400E8F4DB /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		81CBE21E2BE3D4CF00E8F4DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		81DCE54D2BE3CCEE0054F888 /* OpenStreetMapVersuch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenStreetMapVersuch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				81CBE21E2BE3D4CF00E8F4DB /* Info.plist */,
+				81B5A7F52BE5207100034203 /* POI.swift */,
 				81DCE5502BE3CCEE0054F888 /* OpenStreetMapVersuchApp.swift */,
 				81DCE5522BE3CCEE0054F888 /* ContentView.swift */,
 				81CBE21C2BE3D04400E8F4DB /* SearchBar.swift */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81DCE5532BE3CCEE0054F888 /* ContentView.swift in Sources */,
+				81B5A7F62BE5207100034203 /* POI.swift in Sources */,
 				81CBE21D2BE3D04400E8F4DB /* SearchBar.swift in Sources */,
 				81DCE5552BE3CCEE0054F888 /* Item.swift in Sources */,
 				81DCE5512BE3CCEE0054F888 /* OpenStreetMapVersuchApp.swift in Sources */,
