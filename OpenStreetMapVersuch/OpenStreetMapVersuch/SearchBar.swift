@@ -9,10 +9,6 @@ import Foundation
 import SwiftUI
 import OSLog
 
-import Foundation
-import SwiftUI
-import OSLog
-
 struct SearchBar: View {
     @Binding var city: String
     @Binding var restaurants: [POI]
@@ -64,7 +60,7 @@ struct SearchBar: View {
             fetchParks(for: city)
         
             // After fetching all data, save it to a CSV file
-            saveDataToCSV(data: combineData(), filename: "places.csv")
+            saveDataToCSV(data: combineData(), filename: "CollaborativeFiltering.csv")
         }
     
     
@@ -168,7 +164,6 @@ struct SearchBar: View {
             logger.log("Invalid URL")
             return
         }
-        
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data, error == nil else {
                 logger.log("Error: \(error?.localizedDescription ?? "Unknown error")")
@@ -244,5 +239,4 @@ struct SearchBar: View {
             logger.log("Error saving data to CSV file: \(error.localizedDescription)")
         }
     }
-
 }
