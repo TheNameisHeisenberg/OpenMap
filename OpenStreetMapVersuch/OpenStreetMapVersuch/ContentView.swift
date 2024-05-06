@@ -18,13 +18,13 @@ struct ContentView: View {
             List(searchResults) { poi in
                 VStack(alignment: .leading) {
                     Text("Name: \(poi.name)")
-                        .font(.headline) // Hier den Text-Stil anpassen
+                        .font(.headline)
                     Text("Location: \(poi.location)")
-                        .font(.subheadline) // Hier den Text-Stil anpassen
+                        .font(.subheadline)
                     Text("Rating: \(poi.rating)")
-                        .font(.subheadline) // Hier den Text-Stil anpassen
+                        .font(.subheadline)
                     Text("Preference: \(poi.preference.rawValue)")
-                        .font(.subheadline) // Hier den Text-Stil anpassen
+                        .font(.subheadline)
                 }
             }
         }

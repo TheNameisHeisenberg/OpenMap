@@ -36,6 +36,13 @@ struct SearchBar: View {
                 Text("Search")
             }
             .padding()
+            
+            Button(action: {
+                saveDataToCSV()
+            }) {
+                Text("Save")
+            }
+            .padding()
         }
     }
     
@@ -61,11 +68,11 @@ struct SearchBar: View {
                 return
             }
             // Log JSON data
-                      if let jsonString = String(data: data, encoding: .utf8) {
-                          self.logger.log("JSON Data: \(jsonString)")
-                      } else {
-                          self.logger.log("Failed to convert data to string")
-                      }
+            if let jsonString = String(data: data, encoding: .utf8) {
+                self.logger.log("JSON Data: \(jsonString)")
+            } else {
+                self.logger.log("Failed to convert data to string")
+            }
             parseData(data: data, searchPreference: searchPreference)
         }.resume()
     }
@@ -96,5 +103,26 @@ struct SearchBar: View {
             }
         }
         return fetchedPOIs
+    }
+    
+    private func saveDataToCSV() {
+        let fileName = "search_results.csv"
+        let directoryURL = URL(fileURLWithPath: "/Users/david_kindermann/Documents/GitHub/OpenMap/OpenStreetMapVersuch")
+        let fileURL = directoryURL.appendingPathComponent(fileName)
+        
+        var csvText = "poiID,location,title\n"
+        
+        for (index, poi) in searchResults.enumerated() {
+            let location = poi.location.replacingOccurrences(of: "(", with: "").replacingOccurrences(of: ")", with: "")
+            let line = "\(index),\(location),\(poi.name)\n"
+            csvText.append(line)
+        }
+        
+        do {
+            try csvText.write(to: fileURL, atomically: true, encoding: .utf8)
+            print("CSV file saved at: \(fileURL.path)")
+        } catch {
+            print("Failed to save CSV file: \(error.localizedDescription)")
+        }
     }
 }

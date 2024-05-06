@@ -7,7 +7,6 @@
 
 import Foundation
 // SearchPreference.swift
-import Foundation
 
 enum SearchPreference: String, CaseIterable {
     case restaurants
